@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "41aa36fc-29ce-499d-b5b8-87c606a5198d",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "ahmad122",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ahmad",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Ahmad Mustafeen",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "engr.ahmadmustafeen@gmail.com",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://freewillbackend.herokuapp.com/user/login",
+							"protocol": "https",
+							"host": [
+								"freewillbackend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "ahmad122",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ahmad",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Ahmad Mustafeen",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "engr.ahmadmustafeen@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://freewillbackend.herokuapp.com/user/register",
+							"protocol": "https",
+							"host": [
+								"freewillbackend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VIDEOS",
+			"item": [
+				{
+					"name": "PREMIUM UPLOAD",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWhtYWQxMjIiLCJwYXNzd29yZCI6ImFobWFkIiwiaWF0IjoxNjM5Mjk1NTUyfQ.xuULzM4z6QxPYRqjQHKMxarQoMpeh3MFmru9vtUa1fI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/khan/Desktop/untitled folder/y2mate.com - Cats Fighting with sound  Exclusive Video Play with full sound_v144P.mp4"
+								},
+								{
+									"key": "category",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "isPaid",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://freewillbackend.herokuapp.com/video/upload",
+							"protocol": "https",
+							"host": [
+								"freewillbackend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"video",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FREE UPLOAD",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWhtYWQxMjIiLCJwYXNzd29yZCI6ImFobWFkIiwiaWF0IjoxNjM5Mjk1NTUyfQ.xuULzM4z6QxPYRqjQHKMxarQoMpeh3MFmru9vtUa1fI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "category",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "isPaid",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://freewillbackend.herokuapp.com/video/free?category=5",
+							"protocol": "https",
+							"host": [
+								"freewillbackend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"video",
+								"free"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET FREE VIDEOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://freewillbackend.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"freewillbackend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PREMIUM VIDEOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://freewillbackend.herokuapp.com/video/premium",
+							"protocol": "https",
+							"host": [
+								"freewillbackend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"video",
+								"premium"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PAYMENT",
+			"item": [
+				{
+					"name": "recharge",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWhtYWQxMjIiLCJwYXNzd29yZCI6ImFobWFkIiwiaWF0IjoxNjM5NTkxNjE1fQ.Tl-rbYkzqZDzpU8HlIZiU3nTu1u_KgPE5bm4c7xysgs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWhtYWQxMjIiLCJwYXNzd29yZCI6ImFobWFkIiwiaWF0IjoxNjM5NTkxNjE1fQ.Tl-rbYkzqZDzpU8HlIZiU3nTu1u_KgPE5bm4c7xysgs",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://freewillbackend.herokuapp.com/payment",
+							"protocol": "https",
+							"host": [
+								"freewillbackend",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CONTACT",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWhtYWQxMjIiLCJwYXNzd29yZCI6ImFobWFkIiwiaWF0IjoxNjM5NDY2MTMwfQ.j52H4iIWufz9Rv8s4ODxxUTNWHfLRKmsgL6_46gP7Mo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ahmad",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "this is just a query 1",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "i am waiting for something amazing",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/contact/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contact",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
